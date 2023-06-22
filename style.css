@@ -9,6 +9,8 @@
   justify-content: space-around;
   background-color: white;
   padding: 10px;
+  position: relative;
+  z-index: 1;
 }
 .links a {
   text-decoration: none;
@@ -196,7 +198,6 @@ footer {
   .navbar {
     justify-content: space-between;
   }
-
   .links.active {
     display: flex;
   }
