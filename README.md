@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - [Solution URL](https://github.com/ijklmopffs/Easybank)
-- [Live Site URL](https://your-live-site-url.com)
+- [Live Site URL](https://easybank-and-land.netlify.app/)
 
 ## My process
 
