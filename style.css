@@ -62,7 +62,6 @@ button:hover {
   background-image: url(./images/bg-intro-desktop.svg);
   background-position: center;
   background-size: cover;
-  z-index: -1;
 }
 .one_second img {
   height: 700px;
@@ -71,8 +70,6 @@ button:hover {
   margin-top: 40em;
   background-color: hsl(220, 16%, 96%);
   z-index: -2;
-  padding: 5em;
-  gap: 10px;
   position: relative;
   padding: 5em 12em;
 }
@@ -128,7 +125,7 @@ button:hover {
   margin-top: 0.5em;
   color: hsl(233, 26%, 24%);
   font-weight: normal;
-  width: 86%;
+  width: 85%;
 }
 .card h3:hover {
   color: hsl(136, 65%, 51%);
@@ -200,6 +197,9 @@ footer {
   }
   .links.active {
     display: flex;
+  }
+  .card_text h3 {
+    margin-inline: auto;
   }
   .links {
     display: none;
