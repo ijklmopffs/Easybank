@@ -2,20 +2,36 @@
   font-family: "Public Sans", sans-serif;
   box-sizing: border-box;
   margin: 0;
+  overflow-x: hidden;
 }
+
+.container {
+  max-width: 100%;
+  margin-inline: auto;
+}
+
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: space-around;
   background-color: white;
   padding: 10px;
   position: relative;
-  z-index: 1;
+  z-index: 3;
+  justify-content: space-between;
+  padding: 2rem;
 }
 .links a {
   text-decoration: none;
   color: hsl(233, 8%, 62%);
 }
+
+.total {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  justify-content: space-between;
+}
+
 .links a + a {
   margin-left: 10px;
 }
@@ -37,20 +53,17 @@ button:hover {
 .one {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 3rem;
-  position: absolute;
-  bottom: -2%;
+  justify-content: space-between;
+  padding: 2rem;
+  margin-top: -8rem;
+  position: relative;
+  background-color: hsl(0, 0%, 98%);
 }
 .one_first h1 {
   font-size: 3.5em;
   font-weight: normal;
   color: hsl(233, 26%, 24%);
   width: 50%;
-}
-.one_first {
-  position: relative;
-  left: 12%;
 }
 .one_first p {
   width: 40%;
@@ -61,17 +74,21 @@ button:hover {
 .one_second {
   background-image: url(./images/bg-intro-desktop.svg);
   background-position: center;
-  background-size: cover;
+  background-size: 500px;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
+  right: -9rem;
 }
 .one_second img {
-  height: 700px;
+  height: 600px;
 }
 .two {
-  margin-top: 40em;
   background-color: hsl(220, 16%, 96%);
-  z-index: -2;
+  z-index: 1;
   position: relative;
-  padding: 5em 12em;
+  padding: 2rem;
+  margin-top: -10rem;
 }
 .two h2 {
   font-size: 2.5em;
@@ -101,7 +118,7 @@ button:hover {
 .three {
   padding: 4em;
   background-color: hsl(0, 0%, 98%);
-  padding: 5em 12em;
+  padding: 2rem;
 }
 .cards {
   display: flex;
@@ -151,9 +168,8 @@ button:hover {
 footer {
   background-color: hsl(233, 26%, 24%);
   display: flex;
-  justify-content: space-around;
-  padding: 1em;
-  height: 120px;
+  justify-content: space-between;
+  padding: 2rem;
 }
 .logos {
   display: flex;
@@ -191,12 +207,13 @@ footer {
 .hamburger {
   display: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .navbar {
     justify-content: space-between;
   }
   .links.active {
     display: flex;
+    position: fixed;
   }
   .card_text h3 {
     margin-inline: auto;
@@ -216,6 +233,7 @@ footer {
   }
   .links a + a {
     margin-top: 2em;
+    margin-left: 0px;
   }
   .links {
     display: none;
@@ -238,24 +256,22 @@ footer {
     width: 98%;
   }
   .one_first h1 {
-    width: 96%;
+    width: 95%;
   }
   .one_first p {
     width: 96%;
     text-align: center;
   }
   .one_second {
-    background-image: url(./images/bg-intro-mobile.svg);
-    width: 100%;
+    right: 0rem;
   }
+
   .one_second img {
-    width: 85%;
     height: 430px;
   }
   .two {
     display: flex;
     flex-direction: column;
-    margin-top: 44em;
     padding: 2em;
     align-items: center;
     text-align: center;
@@ -268,6 +284,7 @@ footer {
   }
   .two_second {
     flex-direction: column;
+    gap: 4rem;
   }
   .two_second div {
     display: flex;
@@ -313,5 +330,24 @@ footer {
   }
   .last p {
     margin-top: 1em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .one_first h1 {
+    width: 75%;
+  }
+  .one_first p {
+    width: 65%;
+  }
+  .one_second {
+    right: -2rem;
+  }
+  .two_second p {
+    width: 90%;
+  }
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
